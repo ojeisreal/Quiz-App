@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz-App</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="highscore">Veiw Highscores <div class="highscoreimg"><img src="Left_hand_icon.svg"
+                    alt="Left_hand_icon"></div>
+        </h1>
+        <h1 id="timer">Time: <div id="countdown"></div>
+        </h1>
+    </header>
+
+    <div class="highscores" id="highscores">
+        <h3>Highscores</h3> <br><br>
+        <p id="highscoredisplay"></p><br>
+        <div class="scoreboardbtns">
+            <button onclick="goback()">Go Back</button>
+            <button class="clearscores" onclick="clearscores()">Clear Highscores</button>
+        </div>
+    </div>
+
+    <script>
+        var highscoredisplay = document.getElementById('highscoredisplay');
+        for (i = 0; i < localStorage.length; i++) {
+            nameinputed = localStorage.key(i);
+            scoregotten = localStorage.getItem(nameinputed);
+            var newhighscoredisplay = highscoredisplay.cloneNode(true);
+            j = i + 1;
+            newhighscoredisplay.innerHTML = "" + j + ". " + nameinputed + " - " + scoregotten;
+            document.getElementById('highscoredisplay').appendChild(newhighscoredisplay);
+        }
+        document.getElementById('highscores').style.display = "block";
+
+        function clearscores() {
+            localStorage.clear();
+            location.replace('index.html');
+        }
+
+        function goback() {
+            location.replace('index.html');
+        }
+    </script>
+
+</body>
+
+</html>

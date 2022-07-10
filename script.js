@@ -98,25 +98,12 @@ function countdown() {
   }
 }
 
-function scoreboard() {
-  var highscoredisplay = document.getElementById('highscoredisplay');
-  for (i = 0; i < localStorage.length; i++) {
-    nameinputed = localStorage.key(i);
-    scoregotten = localStorage.getItem(nameinputed);
-    var newhighscoredisplay = highscoredisplay.cloneNode(true);
-    j = i + 1;
-    newhighscoredisplay.innerHTML = "" + j + ". " + nameinputed + " - " + scoregotten;
-    document.getElementById('highscoredisplay').appendChild(newhighscoredisplay);
-  }
-  document.getElementById('highscores').style.display = "block";
-}
-
 function scoresubmit() {
   var initialsinput = document.getElementById('initialsinput').value;
   if (initialsinput) {
     document.getElementById('scoresheet').style.display = "none";
     localStorage.setItem(initialsinput, score);
-    scoreboard()
+    location.replace('highscores.html');
   } else {
     document.getElementById('initialsresponce').style.color = "red";
     document.getElementById('initialsresponce').innerHTML = "Enter your initials!";
@@ -124,20 +111,11 @@ function scoresubmit() {
   
 }
 
-function clearscores() {
-  localStorage.clear();
-  location.reload();
-}
-
-function goback() {
-  location.reload();
-}
-
 function viewhighsores() {
   document.getElementById('startcard').style.display = "none";
   document.getElementById('questioncard').style.display = "none";
   document.getElementById('scoresheet').style.display = "none";
-  scoreboard()
+  location.replace('highscores.html');
 }
 
 function clearinputerror(){

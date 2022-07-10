@@ -12,9 +12,11 @@
 
 <body>
     <header>
-        <h1 class="highscore" onclick="viewhighsores()">Veiw Highscores <div class="highscoreimg"><img src="Left_hand_icon.svg" alt="Left_hand_icon"></div>
+        <h1 class="highscore" onclick="viewhighsores()">Veiw Highscores <div class="highscoreimg"><img
+                    src="Left_hand_icon.svg" alt="Left_hand_icon"></div>
         </h1>
-        <h1 id="timer">Time: <div id="countdown"></div></h1>
+        <h1 id="timer">Time: <div id="countdown"></div>
+        </h1>
     </header>
 
     <div class="startcard" id="startcard">
@@ -37,14 +39,8 @@
         </div>
     </div>
 
-    <div class="highscores" id="highscores">
-        <h3>Highscores</h3> <br><br>
-        <p id="highscoredisplay"></p><br>
-        <div class="scoreboardbtns">
-            <button onclick="goback()">Go Back</button>
-            <button class="clearscores" onclick="clearscores()">Clear Highscores</button>
-        </div>
-    </div>
+    <!--Div for displaying of highscores moved to new page highscores.html 
+        to resolve issue of scresheet reappering after initials and scores are submitted-->
 
     <div class="scoresheet" id="scoresheet">
         <h3>All done!</h3> <br><br>

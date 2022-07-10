@@ -130,7 +130,6 @@ button{
     border: 3px solid #c9c9c9;
     border-radius: 40px;
     box-shadow: 10px 5px 5px #c9c9c9;
-    display: none;
 }
 
 .scoreboardbtns{
@@ -155,11 +154,17 @@ button{
 
 @media (max-width: 500px){
     header{
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .highscoreimg img{
         width: 16px;
+        position: relative;
+        top: 2px;
+    }
+
+    .highscore{
+        gap: 5px;
     }
 
     #timer{
@@ -167,7 +172,7 @@ button{
     }
 
     #countdown{
-        width: 80px;
+        width: 90px;
     }
 
     .startcard{
@@ -176,7 +181,7 @@ button{
     }
 
     h1{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     h3{
