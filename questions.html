@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Quiz-App</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="highscore" onclick="viewhighsores()">Veiw Highscores <div class="highscoreimg"><img
+                    src="Left_hand_icon.svg" alt="Left_hand_icon"></div>
+        </h1>
+        <h1 id="timer">Time: <div id="countdown"></div>
+        </h1>
+    </header>
+
+    <div class="startcard" id="startcard">
+        <h3>Coding Quiz Challenge</h3> <br><br>
+        <p>Try to answer the following code-related questions within the time limit.</p><br>
+        <p>Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p><br>
+        <button onclick="startquiz()">Start Quiz</button>
+    </div>
+
+    <div class="questioncard" id="questioncard">
+        <h3 id="questntxt">Commonly used data types DO NOT include:</h3> <br><br>
+        <p class="optioncard" onclick="option(0)">1. strings</p>
+        <p class="optioncard" onclick="option(1)">2. booleans</p>
+        <p class="optioncard" onclick="option(2)">3. alerts</p>
+        <p class="optioncard" onclick="option(3)">4. numbers</p>
+        <br>
+        <div class="responsecard" id="responsecard">
+            <div class="responseline"></div>
+            <div class="responce" id="responce">Correct!</div>
+        </div>
+    </div>
+
+    <!--Div for displaying of highscores moved to new page highscores.html 
+        to resolve issue of scresheet reappering after initials and scores are submitted-->
+
+    <div class="scoresheet" id="scoresheet">
+        <h3>All done!</h3> <br><br>
+        <p id="scoredisplay">Your Final score is 40.</p><br>
+        <div class="initials">
+            <p>Enter initials:</p>
+            <input type="text" id="initialsinput" maxlength="2" onclick="clearinputerror()">
+            <button onclick="scoresubmit()">Submit</button>
+        </div>
+        <div id="initialsresponce"></div>
+    </div>
+
+</body>
+
+</html>

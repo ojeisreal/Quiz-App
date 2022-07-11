@@ -152,6 +152,36 @@ button{
     padding: 0 20px;
 }
 
+.applogo{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    gap: 5px;
+    transform: translateY(40vh);
+}
+
+.applogo h1{
+    font-size: 50px;
+    position: relative;
+    top: -5px;
+}
+
+.applogo img{
+    width: 60px;
+}
+
+.createdby{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.createdby h1{
+    font-weight: 100;
+    font-size: 12px;
+}
+
 @media (max-width: 500px){
     header{
         padding: 0 10px;
